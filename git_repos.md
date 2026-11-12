@@ -1,19 +1,27 @@
 
 # Repos
 
+## init
+### init repo
+
+	git init
+
 ## clone
 ### remote to local
-	git clone git@gitlab.dom.com:path/to/repo.git [name of local repo]
+	git clone git@github.com:path/to/repo.git [name of local repo]
 
 ### local to remote
 	git init -b main
 	git add .
 	git commit -m "Initial commit"
-	git remote add origin https://gitlab.dom.com/repo     # remote must exist and be empty
+	git remote add origin https://github.com/repo     # remote must exist and be empty
 	git push -u origin main
 
 ## update
 ### update local
+	git fetch --prune		# do remote deletions on local too
+	git merge
+
 	git pull      // git fetch && git merge
 	
 ### update remote
